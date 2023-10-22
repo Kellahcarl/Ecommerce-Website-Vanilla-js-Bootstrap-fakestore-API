@@ -1,5 +1,5 @@
 import { addToCart } from "./cart/addToCart.js";
-import { getElement } from "./utils.js";
+
 import { formatPrice } from "./utils.js";
 
 function displayProducts(data, section) {
@@ -8,7 +8,7 @@ function displayProducts(data, section) {
       const { title, id, price, image } = item;
       return `    <div class="col-12 col-md-6 col-lg-4 ">
       <div class="card shadow features-card" data-id=${id}>
-        <div class="card-body d-flex flex-column justify-content-between">
+        <div class="card-body ">
           <div class="card-img-top ">
             <img
               class="card-img-top img-fluid "
@@ -27,7 +27,7 @@ function displayProducts(data, section) {
         </div>
         <div class="features-icons">
           <div
-            class="f-icons d-flex justify-content-between align-items-center"
+            class="f-icons d-flex flex-start align-items-center"
           >
             <span
               class="tt addBtn"

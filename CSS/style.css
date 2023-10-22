@@ -30,7 +30,7 @@ header .container-lg .nav-link {
 
 .cart-icon i {
   color: black !important;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .cart-icon {
@@ -44,7 +44,6 @@ header .container-lg .nav-link {
   padding: 2px;
 }
 
-/* start products */
 .list-group-item {
   cursor: pointer;
 }
@@ -79,15 +78,10 @@ input[type="search"] {
   z-index: 500;
 }
 
-
 .hide {
   display: none;
 }
-/* 
-  ========
-  start  navbar
-  ======== 
-  */
+
 
 header .container-lg {
   position: relative;
@@ -100,15 +94,7 @@ header .container-lg .navbar-brand {
   transform: translate(-50%, -50%);
 }
 
-/* end logo */
 
-
-
-/* 
-  =================
-  start card
-  ================= 
-  */
 
 #cart {
   background-color: #f1f5f8 !important;
@@ -141,24 +127,12 @@ header .container-lg .navbar-brand {
 .hide {
   display: none !important;
 }
-/* 
-  =================
-  end  cart
-  ================= 
-  */
-
-/* 
-  =================
-  start features
-  ================= 
-  */
-
 
 
 .features-card {
   position: relative;
   transition: var(--main-transition);
-  min-height: 450px !important;
+  height: 200px !important;
 }
 @media (min-width: 992px) {
   .features-card {
@@ -190,7 +164,7 @@ header .container-lg .navbar-brand {
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   transform: translate(-50%, -50%);
 }
 .features-card .features-icons i {
@@ -200,7 +174,7 @@ header .container-lg .navbar-brand {
 }
 
 .features-card:hover {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 .features-card:hover .features-icons {
@@ -215,7 +189,14 @@ header .container-lg .navbar-brand {
 .features .btn {
   width: fit-content !important;
 }
-/* start loader */
+
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .load {
   display: block;
   animation-name: spin;
@@ -232,7 +213,7 @@ header .container-lg .navbar-brand {
     transform: rotate(360deg);
   }
 }
-/* end loader */
+
 
 @media (min-width: 768px) {
   .container {
