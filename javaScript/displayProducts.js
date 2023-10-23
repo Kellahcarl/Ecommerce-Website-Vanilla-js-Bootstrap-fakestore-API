@@ -5,7 +5,7 @@ import { formatPrice } from "./utils.js";
 function displayProducts(data, section) {
   const html = data
     .map((item) => {
-      const { title, id, price, image } = item;
+      const { title, id, price, image, description } = item;
       return `    <div class="col-12 col-md-6 col-lg-4 ">
       <div class="card shadow features-card" data-id=${id}>
         <div class="card-body ">
@@ -24,36 +24,36 @@ function displayProducts(data, section) {
           <div class="card-text text-center">
             <span class="h4 text-center">${formatPrice(price)}</span>
           </div>
-        </div>
-        <div class="features-icons">
-          <div
-            class="f-icons d-flex flex-start align-items-center"
-          >
+          <div class ="f-icons">
             <span
-              class="tt addBtn"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Add to cart"
-              data-id=${id}
-              ><i class="bi bi-cart-plus rounded-circle me-4 "   
-              data-bs-toggle="offcanvas"
-              data-bs-target="#cart"
-              aria-controls="offcanvasRight"></i>
+                class="tt addBtn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="Add to cart"
+                data-id=${id}
+                ><i class="bi bi-cart-plus rounded-circle me-4 "   
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cart"
+                aria-controls="offcanvasRight"> Add to Cart</i>
             </span>
-            
-          </div>
+          </div>          
         </div>
+        
+        
       </div>
+      <div class="d-none" data-description="${description}"></div>
     </div>`;
     })
     .join("");
   section.innerHTML = html;
+
+
   const addBtns = document.querySelectorAll(".addBtn");
   addBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       const id = e.currentTarget.dataset.id;
       e.preventDefault();
-      console.log(e.currentTarget);
+      // console.log(e.currentTarget);
       if (id) {
         addToCart(id, 1);
       }

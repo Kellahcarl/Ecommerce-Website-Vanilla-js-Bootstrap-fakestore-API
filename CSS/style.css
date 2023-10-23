@@ -145,49 +145,32 @@ header .container-lg .navbar-brand {
   .features-card img {
     height: 250px !important;
     max-height: 250px !important;
+  object-fit: cover;
+  object-position: center;
   }
 }
 
-.features-card .features-icons {
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(211, 235, 253, 0.2);
-  overflow: hidden;
-  transition: var(--main-transition);
-}
-
-.features-card .features-icons .f-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-}
-.features-card .features-icons i {
-  background-color: #0d6efd;
-  padding: 5px;
-  color: white;
-}
-
 .features-card:hover {
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
-.features-card:hover .features-icons {
-  width: 100%;
-  height: 100%;
+.features-card .f-icons{
+  /* border : 1px solid red; */
+  /* background-color: rgba(100, 100, 233, 0.362); */
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.features .al-products {
-  position: relative;
-}
-
-.features .btn {
-  width: fit-content !important;
+.f-icons > span{
+  align-items: center;
+  text-align: center;
+  background-color: var(--maincolor);
+  color: white;
+  padding: .5rem;
+  border-radius: .8rem;
+  cursor: pointer;
 }
 
 
@@ -195,6 +178,7 @@ header .container-lg .navbar-brand {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  ;
 }
 
 .load {
