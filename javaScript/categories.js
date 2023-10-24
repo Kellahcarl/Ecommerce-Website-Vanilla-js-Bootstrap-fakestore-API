@@ -16,6 +16,7 @@ function categoriesFilter(data) {
     it.addEventListener("click", function (e) {
       // getting category from each btn
       const category = e.currentTarget.dataset.category;
+      // console.log(category);
 
       //   add active class to active btn
       categoriesBtn.forEach((cat) => {
@@ -25,9 +26,12 @@ function categoriesFilter(data) {
         }
       });
       //   filter data with category
-      const filtredData = data.filter((item) => {
+      const filtredData = data.filter( ( item ) =>
+      {
+        // console.log(item.category.startsWith(category));
         return item.category.startsWith(category);
-      });
+      } );
+      // console.log("here");
       //   display filtred data
       displayProducts(filtredData, products);
       // add serach filter

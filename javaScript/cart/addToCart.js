@@ -12,7 +12,7 @@ function addToCart(id, amt) {
   // look for the product in the cart with his id
   const item = cart.find((cartItem) => cartItem.id == id);
   // case:product is't in the cart
-  console.log(item);
+  // console.log(item);
   if (!item) {
     // getting product from the store
     const prod = findProduct(id);
