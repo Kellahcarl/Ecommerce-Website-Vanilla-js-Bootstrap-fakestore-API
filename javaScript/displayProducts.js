@@ -7,7 +7,7 @@ function displayProducts(data, section) {
     const { title, id, price, image, description } = item;
 
     const card = document.createElement("div");
-    card.classList.add("col-12", "col-md-4", "col-lg-3");
+    card.classList.add("col-12", "col-md-4", "col-lg-4");
 
     card.innerHTML = `
       <div class="card shadow features-card" data-id=${id}>

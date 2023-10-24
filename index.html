@@ -181,7 +181,7 @@
     </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- Adjust the class for larger screens -->
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">Product Description</h5>
@@ -190,11 +190,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <div id="product-description"></div>
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Display the image on the left for screens larger than 994px -->
+            <div class="card-img-top">
+              <img class="card-img-top img-fluid" src="image-source" alt="Product Name" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <!-- Display text content on the right for screens larger than 994px -->
+            <div id="product-description"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
     <footer class="bg-dark text-light py-4">
   </body>
