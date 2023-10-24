@@ -62,14 +62,14 @@ function findProduct(id) {
 function cartCount() {
   const cart = getLocalStorage("cart");
   const countIcon = getElement(".count-icon");
+
   if (cart.length > 0) {
-    const amount = cart.reduce((accu, curr) => {
-      accu += curr.amount;
+    const uniqueProductIds = new Set();
+    cart.forEach((item) => {
+      uniqueProductIds.add(item.id);
+    });
 
-      return accu;
-    }, 0);
-
-    countIcon.textContent = amount;
+    countIcon.textContent = uniqueProductIds.size; // Display the count of unique products
   } else {
     countIcon.textContent = "0";
   }

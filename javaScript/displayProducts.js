@@ -7,7 +7,7 @@ function displayProducts(data, section) {
     const { title, id, price, image, description } = item;
 
     const card = document.createElement("div");
-    card.classList.add("col-12", "col-md-6", "col-lg-4");
+    card.classList.add("col-12", "col-md-4", "col-lg-3");
 
     card.innerHTML = `
       <div class="card shadow features-card" data-id=${id}>
@@ -15,17 +15,20 @@ function displayProducts(data, section) {
           <div class="card-img-top">
             <img class="card-img-top img-fluid" src=${image} alt=${title} />
           </div>
-          <div class="card-title text-center h5 fw-normal text-muted mt-">
-            ${title}
+          <div class="card-text">
+            <div class="card-title text-center h5 fw-normal text-muted mt-">
+              ${title}
+            </div>
+            <div class="card-text text-center">
+              <span class="h4 text-center">${formatPrice(price)}</span>
+            </div>
+            <div class="f-icons">
+              <span class="tt addBtn" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to cart" data-id=${id}>
+                <i class="bi bi-cart-plus rounded-circle me-4" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="offcanvasRight"> Add to Cart</i>
+              </span>
+            </div>
           </div>
-          <div class="card-text text-center">
-            <span class="h4 text-center">${formatPrice(price)}</span>
-          </div>
-          <div class="f-icons">
-            <span class="tt addBtn" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to cart" data-id=${id}>
-              <i class="bi bi-cart-plus rounded-circle me-4" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="offcanvasRight"> Add to Cart</i>
-            </span>
-          </div>
+          
         </div>
       </div>
     `;
