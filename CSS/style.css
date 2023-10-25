@@ -28,6 +28,7 @@ header .container-lg .nav-link {
   color: black !important;
 }
 
+
 .cart-icon i {
   color: black !important;
   /* border: 1px solid red; */
@@ -44,6 +45,9 @@ header .container-lg .nav-link {
   padding: 2px;
 }
 
+.offcanvas ul li a:hover {
+  color: #0d6efd !important;
+}
 .list-group-item {
   cursor: pointer;
 }
@@ -94,7 +98,9 @@ header .container-lg .navbar-brand {
   transform: translate(-50%, -50%);
 }
 
-
+header .container-lg .nav-link:hover {
+  color: #0d6efd !important;
+}
 
 #cart {
   background-color: #f1f5f8 !important;
@@ -132,12 +138,12 @@ header .container-lg .navbar-brand {
 .features-card {
   position: relative;
   transition: var(--main-transition);
-  height: 200px !important;
+  min-height: 450px !important;
 }
 @media (min-width: 992px) {
   .features-card {
     height: 650px !important;
-    max-height: 650px;
+    max-height: 650px !important;
   }
 }
 
@@ -154,14 +160,11 @@ header .container-lg .navbar-brand {
   transform: scale(1.05);
 }
 
-.features-card .f-icons{
-  /* border : 1px solid red; */
-  /* background-color: rgba(100, 100, 233, 0.362); */
-  border-radius: 2rem;
+.f-icons{
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+
 
 .f-icons > span{
   align-items: center;
@@ -187,6 +190,28 @@ header .container-lg .navbar-brand {
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-duration: 1s;
+}
+
+#exampleModalCenter {
+    overflow-y: auto;
+}
+
+#exampleModalCenter .modal-content {
+    max-height: 100%; 
+}
+
+#exampleModalCenter .modal-body {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto; 
+}
+
+
+#product-description{
+  /* border: 1px solid red; */
+  display : flex ;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 @keyframes spin {
@@ -216,3 +241,4 @@ header .container-lg .navbar-brand {
     width: 1170px;
   }
 }
+
