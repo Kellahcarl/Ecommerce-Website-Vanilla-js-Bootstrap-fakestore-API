@@ -37,11 +37,16 @@ function displayProducts(data, section) {
 
     // Prevent modal from toggling when "Add to Cart" button is clicked
     const addBtn = card.querySelector(".addBtn");
+    const modal = document.getElementById("exampleModalCenter");
     addBtn.addEventListener("click", (e) => {
       e.stopPropagation(); // Stop event propagation
       const id = e.currentTarget.dataset.id;
       if (id) {
-        addToCart(id, 1); // Add to Cart functionality
+        addToCart(id, 1);
+        // Add to Cart functionality
+        // console.log("here");
+        // modal.classList.add("hide");
+        // document.body.classList.remove("modal-open");
       }
     });
 
